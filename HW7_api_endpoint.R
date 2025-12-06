@@ -66,7 +66,7 @@ function(input){
       as.factor
     ))
   
-  return(as.vector(predict(model, input, type = 'prob')[2]))
+  return(pull(predict(model, input, type = 'prob'), "1"))
 }
 
 #* @get /predict_binary/<input>
